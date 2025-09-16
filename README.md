@@ -1,69 +1,22 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Julia Silva RM: 564670 Julia Cabral RM 565583 Luana Luo RM 562271 Sidyellen Souza RM 566408
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+### Principais Funcionalidades
+Componentização:
+O projeto utiliza componentes React para dividir a interface em partes reutilizáveis e organizadas. Isso facilita a manutenção e evolução do código, pois cada componente tem uma responsabilidade específica.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Rotas:
+A aplicação implementa rotas para permitir a navegação entre diferentes páginas (por exemplo, página inicial, página de notícias, etc.) sem recarregar o site. Isso é feito a com biblioteca React Router.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Estilização Customizada:
+Os estilos são organizados em tailwind, permitindo personalizar a aparência dos componentes e páginas conforme a identidade visual desejada.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### O que o projeto faz
+O Pab-app é uma aplicação web desenvolvida em React. Ele serve como uma base para criar um aplicativo com múltiplas páginas, componentes reutilizáveis e estilos próprios. O usuário pode navegar entre diferentes partes do aplicativo de forma rápida e intuitiva, aproveitando a estrutura moderna do React, vite e tailwind. 
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Páginas do Projeto
+As páginas representam as diferentes seções da aplicação, como página inicial, página de notícias, entre outras. Cada página é implementada como uma página React separada, localizada na pasta de páginas. Isso permite que cada página tenha sua própria lógica, estrutura e estilos, facilitando a manutenção e a expansão do sistema. A navegação entre páginas é feita por meio das rotas, proporcionando uma experiência fluida ao usuário.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
