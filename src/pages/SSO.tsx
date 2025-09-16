@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Fundo from "../img/Paginabg.jpg";
 
 
+
 const Login: React.FC = () => {
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
